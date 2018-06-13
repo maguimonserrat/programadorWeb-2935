@@ -1,6 +1,31 @@
-'use strict'
+console.log('ejercicio clase 4')
 
-console.log('Init app clase 04')
+var results = [ 7, 5, 6, 4, 3, 2, 8 ]
+
+function prom (examResults) {
+  var result = 0
+
+  for (var i = 0; i < examResults.length; i++) {
+    result = result + examResults[i]
+  }
+
+  var promedio = result / examResults.length
+
+  return promedio
+}
+
+var result = prom(results)
+
+console.log(result)
+
+/*
+function promedio () {
+  var resultPromedio = result / examResults.length
+  return result
+}
+
+console.log(resultPromedio)
+*/
 
 // # 4 Funciones
 
