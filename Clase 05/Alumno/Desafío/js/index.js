@@ -1,6 +1,6 @@
 var newStudents = []
 var student
-var randomNumber = Math.random()
+
 
 var students = [
   {
@@ -23,33 +23,30 @@ var students = [
   }
 ]
 
-function Student (firstName, lastName, dni, email) {
-  var id = Math.random()
+function Student (firstName, lastName, email) {
 
   this.firstName = firstName
   this.lastName = lastName
-  this.dni = dni
   this.email = email
 
-  this.getId = function () {
-    return id
+  this.getDni = function () {
+    return dni
   }
-  this.getStudentName = function () {
-    return firstName + lastName + dni + email
-  }
+   this.getFullName = function () {
+     return firstName + lastName
+   }
 }
 
 for (var i = 0; i < students.length; i++) {
-  student = students[i]
-
-  newStudent = new Student(
-    student.firstName,
-    student.lastName,
-    student.dni,
-    student.email
-  )
-  newStudents.push(newStudent)
+    student = students[i]
+  
+    newStudent = new Student (student.firstName, student.lastName, student.email)
+    newStudents.push(newStudent)
 }
 
-console.log(student)
-console.log(newStudent)
+//console.log(student)
+console.log(newStudents)
+console.log(student.lastName)
+console.log(student.firstName)
+
+// if student.lastName === undefined , no mostrar newStudents
