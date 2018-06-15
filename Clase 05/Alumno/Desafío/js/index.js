@@ -1,7 +1,6 @@
 var newStudents = []
 var student
 
-
 var students = [
   {
     firstName: 'Juan',
@@ -24,7 +23,6 @@ var students = [
 ]
 
 function Student (firstName, lastName, email) {
-
   this.firstName = firstName
   this.lastName = lastName
   this.email = email
@@ -32,21 +30,21 @@ function Student (firstName, lastName, email) {
   this.getDni = function () {
     return dni
   }
-   this.getFullName = function () {
-     return firstName + lastName
-   }
+  this.getFullName = function () {
+    return firstName + lastName
+  }
 }
 
 for (var i = 0; i < students.length; i++) {
-    student = students[i]
-  
-    newStudent = new Student (student.firstName, student.lastName, student.email)
-    newStudents.push(newStudent)
+  student = students[i]
+
+  newStudent = new Student(student.firstName, student.lastName, student.email)
+  newStudents.push(newStudent)
 }
 
-//console.log(student)
 console.log(newStudents)
-console.log(student.lastName)
-console.log(student.firstName)
+//console.log(student)
+//console.log(student.lastName)
+//console.log(student.firstName)
 
-// if student.lastName === undefined , no mostrar newStudents
+// if student.lastName === undefined , no mostrar newStudents - no se como hacer esa parte :)

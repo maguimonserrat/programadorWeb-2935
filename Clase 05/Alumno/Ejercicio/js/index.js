@@ -31,7 +31,7 @@ function Car (model, brand, year) {
     return id
   }
   this.getCarName = function () {
-    return model + brand + year
+    return this.model + this.brand + this.year
   }
 }
 
@@ -42,7 +42,10 @@ for (var i = 0; i < cars.length; i++) {
   newCars.push(newCar)
 }
 
+//este e sun array de objetos planos
 console.log(cars)
+
+//este es un array de cars
 console.log(newCars)
 
 // console.log(newCars[0].getId())
@@ -56,4 +59,18 @@ var Audi_TT = new Car('Suran', 'volkswagen', 2015)
 
 var Suran = new Car('Suran', 'volkswagen', 2015)
 console.log(Suran.getId())
+
+el this siempre es publico
+el this.get es privado
+tengo que hacer this
+
+ver lo q esta comentado en el ejercicio del profe- 
+
+push agrega un elemento al final del array
+
+- verificar q sea un array 
+- hacer copia del array
+- eliminar el elemento
+
+
 */
