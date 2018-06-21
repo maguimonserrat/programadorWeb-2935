@@ -2,6 +2,8 @@
 
 - La función tiene que recibir como parámetro una key y buscar en el localStorage por esa key devolviendo un objeto de JavaScript, si no existe el elemento debe devolver un Array vacío. La función tiene que validar los parámetros que recibe, en caso de que alguno sea incorrecto no debe romper ni borrar nada.
 
+validar si es un string?
+
 ```js 
 var studentsList = getLocalList('studentsList') // Debe devolver siempre un Array [] vacío o con elementos [...]
 ```
