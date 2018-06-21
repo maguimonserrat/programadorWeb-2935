@@ -53,5 +53,3 @@ function getLocalList (key, array) {
 var studentsList = getLocalList('studentsList')
 
 console.log(studentsList)
-
-//hacer lo mismo pero al reves, envez de get item, hacer et item ?
