@@ -1,10 +1,26 @@
+var mainListNode = document.getElementById('main-list')
+
+mainListNode.innerHTML = ''
+
+var texts = [ 'Ed', 'Edd', 'Eddy' ]
+
+var liNode
+
+for (var i = 0; i < texts.length; i++) {
+  liNode = document.createElement('li')
+  liNode.className = 'list-group-item'
+  liNode.innerHTML = texts[i]
+  mainListNode.appendChild(liNode)
+}
+
+//mainList.innerHTML = '<li class="ist-group-item" id="new-list-item">Hola ' + firstName + '</li>'
+
 // # 8 DOM [Modulo B]
 
 // - 8.1	¿Qué es el árbol de nodos?
 // - 8.2	Objeto `document`
 // - 8.3	Acceso a los nodos
 //    - `getElementById()`
-
 // var mainTitle = document.getElementById('main-title')
 
 // var firstName = prompt('Ingrese su nombre')
@@ -36,25 +52,25 @@
 // - 8.4	Crear y eliminar nodos
 //    - `createElement`
 
-var mainListNode = document.getElementById('main-list')
+// var mainListNode = document.getElementById('main-list')
 
-mainListNode.innerHTML = ''
+// mainListNode.innerHTML = ''
 
-var numbers = [ 1, 2, 34, 45, 5, 6, 677, 8, 8 ]
+// var numbers = [ 1, 2, 34, 45, 5, 6, 677, 8, 8 ]
 
-var liNode
+// var liNode
 
-for (var i = 0; i < numbers.length; i++) {
-  liNode = document.createElement('li')
-  liNode.className = 'red blue'
-  liNode.innerHTML = numbers[i]
-  liNode.id = i
-  mainListNode.appendChild(liNode)
-}
+// for (var i = 0; i < numbers.length; i++) {
+//   liNode = document.createElement('li')
+//   liNode.className = 'red blue'
+//   liNode.innerHTML = numbers[i]
+//   liNode.id = i
+//   mainListNode.appendChild(liNode)
+// }
 
-var liNode4 = document.getElementById('4')
+// var liNode4 = document.getElementById('4')
 
-liNode4.parentNode.removeChild(liNode4)
+// liNode4.parentNode.removeChild(liNode4)
 
 //    - `innerHTML`
 //    - `appendChild`
