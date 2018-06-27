@@ -5,6 +5,7 @@ emailNode.onblur = validateMail
 function validateMail (event) {
   var node = event.target
   if (
+    node.value &&
     node.value.length > 0 &&
     node.value.indexOf('@') !== -1 &&
     node.value.indexOf('.') !== -1
