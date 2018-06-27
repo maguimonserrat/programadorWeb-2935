@@ -15,3 +15,5 @@
 [Remove class](https://www.w3schools.com/howto/howto_js_remove_class.asp)
 
 [Boostrap forms](https://getbootstrap.com/docs/4.0/components/forms/)
+
+como el required pero en js

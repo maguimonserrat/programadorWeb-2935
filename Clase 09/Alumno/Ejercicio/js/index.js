@@ -66,33 +66,52 @@
 
 // showMessage('Magdalena')
 
-var inputPasswordNode = document.getElementById('inputPassword')
+// var inputPasswordNode = document.getElementById('inputPassword')
 
-inputPasswordNode.onblur = validatePassword
+// inputPasswordNode.onblur = validatePassword
 
-function validatePassword (event) {
+// function validatePassword (event) {
+//   var node = event.target
+
+//   // var values = node.value.split('a')
+
+//   // console.log(values)
+//   console.log(node.value)
+//   if (node.value.length >= 6) {
+//     console.log('Contraseña correcta', node.value)
+//     node.classList.remove('is-invalid')
+//     node.classList.add('is-valid')
+//   } else {
+//     console.log('Contraseña muy corta', node.value)
+//     node.classList.remove('is-valid')
+//     node.classList.add('is-invalid')
+//   }
+// }
+
+// var deleteButtonNode = document.getElementById('deleteButton')
+
+// deleteButtonNode.onclick = clearInputs
+
+// function clearInputs (event) {
+//   inputPasswordNode.value = ''
+//   console.log('Borro contenido')
+// }
+
+var firstNameNode = document.getElementById('firstName')
+
+firstNameNode.onblur = validateName
+
+function validateName (event) {
   var node = event.target
 
-  // var values = node.value.split('a')
-
-  // console.log(values)
-  console.log(node.value)
-  if (node.value.length >= 6) {
-    console.log('Contraseña correcta', node.value)
+  //console.log(node.value)
+  if (node.value.length > 0) {
+    console.log('Nombre ingresado')
     node.classList.remove('is-invalid')
     node.classList.add('is-valid')
   } else {
-    console.log('Contraseña muy corta', node.value)
+    console.log('Nombre requerido')
     node.classList.remove('is-valid')
     node.classList.add('is-invalid')
   }
-}
-
-var deleteButtonNode = document.getElementById('deleteButton')
-
-deleteButtonNode.onclick = clearInputs
-
-function clearInputs (event) {
-  inputPasswordNode.value = ''
-  console.log('Borro contenido')
 }
