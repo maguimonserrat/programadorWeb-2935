@@ -1,47 +1,11 @@
-//console.log('holis')
-
-// var studentsList = [
-//   'CARLOS',
-//   'GERONIMO',
-//   'NICOLAS',
-//   'LUCAS',
-//   'MARIA',
-//   'FEDERICO',
-//   'ANTONIO',
-//   'LORNA',
-//   'JULIAN',
-//   'DIEGO',
-//   'DANIELA',
-//   'JUAN',
-//   'MATEO',
-//   'BARBARA',
-//   'AGUSTIN',
-//   'MARIO',
-//   'MARIEL',
-//   'ANA',
-//   'FLORENCIA'
-// ]
-
-//transforma los datos a json
-//var stringifyStudentsList = JSON.stringify(studentsList)
-
-//los pone en el localStorage una key q se llama list
-//localStorage.setItem('list', stringifyStudentsList)
-
-//los mete en una variable q se llama savedStudentsList
-//var savedStudentsList = localStorage.getItem('list')
-
-// guarda la lista y lo transforma en un string
-//var saveLocalList = JSON.parse(savedStudentsList)
-
-//console.log(saveLocalList)
-
-//si la lista en el local storage no existe que devuelva un array vacio
-
-function getLocalList (key, array) {
-  if (typeof key === 'string' && Array.isArray(array)) {
+//recibe una key
+function getLocalList (key) {
+  //chequea que la key sea un string
+  if (typeof key === 'string') {
+    //recibe la key la devuelve el valor almacenado en esa key
     var savedStudentsList = localStorage.getItem(key)
     if (savedStudentsList) {
+      //transforma de JSON a js y lo guarda en esa variable
       var saveLocalList = JSON.parse(savedStudentsList)
       return saveLocalList
     } else {
@@ -52,4 +16,14 @@ function getLocalList (key, array) {
 
 var studentsList = getLocalList('studentsList')
 
-console.log(studentsList)
+if (studentsList) {
+  // Muestro el resultado de la función
+  console.log(studentsList)
+  if (studentsList.length) {
+    console.log('Tiene guardados ' + studentsList.length + ' estudiantes')
+  } else {
+    console.log('La lista esta vacía')
+  }
+} else {
+  console.log('Le pase una key incorrecta')
+}
