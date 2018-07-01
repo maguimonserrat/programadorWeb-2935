@@ -8,7 +8,7 @@
 
 // # Bucles e iteración
 
-console.log('Init app')
+// console.log('Init app')
 
 // 1. Sentencias de blucle
 //  - while
@@ -20,12 +20,12 @@ console.log('Init app')
 // console.log(5)
 // console.log(6)
 
-// var couter = 1
+var couter = 1
 
-// while (couter <= 6) {
-//   console.log(couter)
-//   couter = couter + 1
-// }
+while (couter <= 6) {
+  console.log(couter)
+  couter = couter + 1
+}
 
 // var name = prompt('Ingrese su nombre')
 

@@ -148,7 +148,7 @@ console.log('Init app clase 04')
 //   var student
 
 //   for (var i = 0; i < students.length; i++) {
-// student = students[i]
+//     student = students[i]
 
 //     console.log(student)
 //   }
@@ -181,14 +181,14 @@ console.log('Init app clase 04')
 
 // firstName = 'Adrián'
 
-// function showMessage () {
-//   var firstName
+function showMessage () {
+  var firstName
 
-//   firstName = 'Diana'
+  firstName = 'Diana'
 
-//   console.log(firstName)
-// }
+  console.log(firstName)
+}
 
-// showMessage()
+showMessage()
 
-// console.log(firstName)
+console.log(firstName)

@@ -1,14 +1,14 @@
-// 1. Condicionales
-// - ìf
+// // 1. Condicionales
+// // - ìf
 
-console.log('Init app')
+// console.log('Init app')
 
 // Falsy values
 
 // Boolean: false
 // Number: 0, -0, NaN
 // String: ''
-// undefined, null
+// // undefined, null
 
 // var value = []
 
@@ -33,21 +33,21 @@ console.log('Init app')
 // 2. Operadores de comparación
 // - ===
 
-// var result = prompt('Ingrese resultado', 'Ganó, Empató o Perdió')
+var result = prompt('Ingrese resultado', 'Ganó, Empató o Perdió')
 
-// if ('Ganó' === result) {
-//   console.log('Sumaste 3 puntos')
-// } else {
-//   if ('Empató' === result) {
-//     console.log('Sumaste 1 punto')
-//   } else {
-//     if ('Perdió' === result) {
-//       console.log('Sumaste 0 puntos')
-//     } else {
-//       console.log('Resultado no correcto')
-//     }
-//   }
-// }
+if ('Ganó' === result) {
+  console.log('Sumaste 3 puntos')
+} else {
+  if ('Empató' === result) {
+    console.log('Sumaste 1 punto')
+  } else {
+    if ('Perdió' === result) {
+      console.log('Sumaste 0 puntos')
+    } else {
+      console.log('Resultado no correcto')
+    }
+  }
+}
 
 // - !==
 

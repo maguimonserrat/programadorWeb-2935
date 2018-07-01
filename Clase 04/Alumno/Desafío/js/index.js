@@ -1,9 +1,3 @@
-//var searchedStudent = prompt('ingrese un nombre')
-
-var firstName
-var lastName
-var dni
-
 var studentsList = [
   {
     firstName: 'Juan',
@@ -27,21 +21,32 @@ var studentsList = [
   }
 ]
 
-console.log(studentsList.length)
-
-function searchStudent (studentsList) {
+function searchStudent (nameOrLastName, students) {
   index = -1
   for (var i = 0; i < studentsList.length; i++) {
-    student = studentsList[i]
+    var student = studentsList[i]
+    if (
+      student.firstName === nameOrLastName ||
+      student.lastName === nameOrLastName
+    ) {
+      index = i
+      break
+    }
   }
-  if ((i = student)) {
-    console.log('Se encontró al estudiante en la posición ' + i)
-  } else {
-    console.log('No se encuentra al estudiante')
-  }
+  return index
 }
 
-/* que reciba el propmt de student.firstName y student.lastName y me de el i */
+var searchedStudent = prompt('ingrese un nombre')
 
-//'se encontró el estudiante en la posición ' studentsList[i]
-// No se pudo encontrar el alumno
+// var index = searchStudent(searchedStudent, studentsList)
+var searchedStudent = searchStudent(searchedStudent, studentsList)
+
+if (index !== -1) {
+  console.log('Se encontró el estudiante en la posición ' + searchedStudent)
+  // console.log(searchedStudent)
+} else {
+  console.log('No encontró el estudiante')
+}
+
+//var searchedStudent = searchStudent(searchedStudent, studentsList)
+// console.log(searchedStudent)

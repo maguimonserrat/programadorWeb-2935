@@ -91,23 +91,23 @@
 
 // var arrayAnyValue = [ 2, 'Ad', false, [ 1, 2, 3 ] ]
 
-// Object
+Object
 
-// var age = 29
+var age = 29
 
-// var student = {
-//   name: 'Adrián',
-//   lastName: 'Ferré',
-//   age: age
-// }
+var student = {
+  name: 'Adrián',
+  lastName: 'Ferré',
+  age: age
+}
 
-// var obj = {}
+var obj = {}
 
-// console.log(student['name'])
+console.log(student['name'])
 
-// student.name = 'Pepe'
+student.name = 'Pepe'
 
-// console.log(student.name)
+console.log(student.name)
 
 // 7. Operadores aritméticos
 
