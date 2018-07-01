@@ -43,10 +43,6 @@ var searchedStudent = searchStudent(searchedStudent, studentsList)
 
 if (index !== -1) {
   console.log('Se encontró el estudiante en la posición ' + searchedStudent)
-  // console.log(searchedStudent)
 } else {
   console.log('No encontró el estudiante')
 }
-
-//var searchedStudent = searchStudent(searchedStudent, studentsList)
-// console.log(searchedStudent)
