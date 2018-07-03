@@ -417,16 +417,15 @@ searchStudentButtonNode.onclick = showStudent //llamo a la funcion en el click
 function showStudent (event) {
   searchedStudent = searchTextInputNode.value // lo q busque en ese imput
 
-  var foundStudent = searchStudentIndexByText(searchedStudent, newStudentsList)
+  var foundStudent = searchStudentIndexByText(searchedStudent, newStudentsList) // armo una variable que me dice la posicion dentro de la lista del alumno q busque
 
   searchListNode.innerHTML = '' // vacio el html
 
+  // si lo encuentra que haga un apendChild de esa posicion q encontro en searchList
   if (foundStudent !== -1) {
-    // si no lo encuentra que haga un apendChild de esa posicion q encontro en searchList
-    var foundtudentNode = createStudentNode(newStudentsList[foundStudent])
+    var foundtudentNode = createStudentNode(newStudentsList[foundStudent]) //
     searchListNode.appendChild(foundtudentNode)
-    console.log('Se encontró el estudiante en la posición ' + searchedStudent)
   } else {
-    console.log('No encontró el estudiante')
+    alert('no se encontro el estudiante')
   }
 }
