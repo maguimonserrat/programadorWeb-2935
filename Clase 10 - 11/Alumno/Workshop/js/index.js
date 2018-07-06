@@ -53,24 +53,6 @@ function validateEmptyField (event) {
 
 var lastNameInputNode = document.getElementById('lastName')
 
-// lastNameInputNode.onblur = validateEmptyField
-
-// function validateEmptyField (event) {
-//   var inputNode = event.target
-
-//   if (!inputNode.value) {
-//     // Caso incorrecto
-//     inputNode.classList.remove('is-valid')
-//     inputNode.classList.add('is-invalid')
-//   } else {
-//     // Caso correcto
-//     inputNode.classList.remove('is-invalid')
-//     inputNode.classList.add('is-valid')
-//   }
-
-//   validateButton()
-// }
-
 // Levantar el dni y validarlo
 
 var dniInputNode = document.getElementById('dni')
