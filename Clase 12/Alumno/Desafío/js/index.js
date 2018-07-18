@@ -4,15 +4,15 @@ inputJQNodes.blur(validateInput)
 
 function validateInput (event) {
   var inputJQNode = $(this)
+  var value = inputJQNode.val()
 
-  if (
-    // inputJQNode.val() && (lo saco xq no hace falta, si se cumple lo da abajo ya está ok o no?)
-    inputJQNode.val().indexOf('@' && '.') > -1
-  ) {
+  if (value && value.indexOf('@') > -1 && value.indexOf('.') > -1) {
     {
-      inputJQNode.removeClass('is-invalid').addClass('is-valid')
+      inputJQNode.removeClass('is-invalid')
+      inputJQNode.addClass('is-valid')
     }
   } else {
-    inputJQNode.removeClass('is-valid').addClass('is-invalid')
+    inputJQNode.removeClass('is-valid')
+    inputJQNode.addClass('is-invalid')
   }
 }
