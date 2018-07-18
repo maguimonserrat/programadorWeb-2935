@@ -42,21 +42,7 @@ $(document).ready(function () {
       }
     }
 
-    if (errorText) {
-      var parentNode = inputNode.parent()
-      parentNode.append('<div class="invalid-feedback">' + errorText + '</div>')
-
-      inputNode.removeClass('is-valid')
-      inputNode.addClass('is-invalid')
-    } else {
-      inputNode.removeClass('is-invalid')
-      inputNode.addClass('is-valid')
-    }
-
-    if (event.type === 'blur') {
-      inputNode.on('input', validateEmailField)
-    }
-    validateButton()
+    appendError(errorText, inputNode, event.type, validateEmailField)
   }
 
   // Función que valida el nombre y coments
@@ -73,6 +59,10 @@ $(document).ready(function () {
       errorText = 'El campo está vacío'
     }
 
+    appendError(errorText, inputNode, event.type, validateField)
+  }
+
+  function appendError (errorText, inputNode, eventType, cbk) {
     if (errorText) {
       var parentNode = inputNode.parent()
       parentNode.append('<div class="invalid-feedback">' + errorText + '</div>')
@@ -84,9 +74,10 @@ $(document).ready(function () {
       inputNode.addClass('is-valid')
     }
 
-    if (event.type === 'blur') {
-      inputNode.on('input', validateField)
+    if (eventType === 'blur') {
+      inputNode.on('input', cbk)
     }
+
     validateButton()
   }
 })
