@@ -1,24 +1,27 @@
 $(document).ready(function () {
   console.log('App init')
 
+  var submitButtonNode = $('#submitButton')
+  var emailInputNode = $('#email')
+  var firstNameInputNode = $('#firstName')
+  var commentsInputNode = $('#comments')
+
+  emailInputNode.one('blur', validateEmailField)
+  firstNameInputNode.one('blur', validateField)
+  commentsInputNode.one('blur', validateField)
+
   // Función que valida si habilitar o no el botón de agregar
-
-  var submitButtonNode = document.getElementById('submitButton')
-
   function validateButton () {
-    var isValidInputNodes = document.getElementsByClassName('is-valid')
+    var isValidInputNodes = $('.is-valid')
 
     if (isValidInputNodes.length === 3) {
-      submitButtonNode.disabled = false
+      submitButtonNode.attr('disabled', false)
     } else {
-      submitButtonNode.disabled = true
+      submitButtonNode.attr('disabled', true)
     }
   }
 
-  var emailInputNode = $('#email')
-
-  emailInputNode.one('blur', validateEmailField)
-
+  // Función que valida el email
   function validateEmailField (event) {
     var inputNode = $(this)
 
@@ -53,41 +56,36 @@ $(document).ready(function () {
     if (event.type === 'blur') {
       inputNode.on('input', validateEmailField)
     }
+    validateButton()
+  }
 
-    //
-    var firstNameInputNode = $('#firstName')
+  // Función que valida el nombre y coments
+  function validateField (event) {
+    var inputNode = $(this)
 
-    firstNameInputNode.one('blur', validatefirstNameField)
+    var value = inputNode.val()
 
-    function validatefirstNameField (event) {
-      var inputNode = $(this)
+    inputNode.next().remove()
 
-      var value = inputNode.val()
+    var errorText = ''
 
-      inputNode.next().remove()
+    if (!value) {
+      errorText = 'El campo está vacío'
+    }
 
-      var errorText = ''
+    if (errorText) {
+      var parentNode = inputNode.parent()
+      parentNode.append('<div class="invalid-feedback">' + errorText + '</div>')
 
-      if (!value) {
-        errorText = 'El campo está vacío'
-      }
+      inputNode.removeClass('is-valid')
+      inputNode.addClass('is-invalid')
+    } else {
+      inputNode.removeClass('is-invalid')
+      inputNode.addClass('is-valid')
+    }
 
-      if (errorText) {
-        var parentNode = inputNode.parent()
-        parentNode.append(
-          '<div class="invalid-feedback">' + errorText + '</div>'
-        )
-
-        inputNode.removeClass('is-valid')
-        inputNode.addClass('is-invalid')
-      } else {
-        inputNode.removeClass('is-invalid')
-        inputNode.addClass('is-valid')
-      }
-
-      if (event.type === 'blur') {
-        inputNode.on('input', validatefirstNameField)
-      }
+    if (event.type === 'blur') {
+      inputNode.on('input', validateField)
     }
     validateButton()
   }
