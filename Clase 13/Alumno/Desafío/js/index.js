@@ -62,6 +62,7 @@ $(document).ready(function () {
     appendError(errorText, inputNode, event.type, validateField)
   }
 
+  // Función que explica el error y valida el botón
   function appendError (errorText, inputNode, eventType, cbk) {
     if (errorText) {
       var parentNode = inputNode.parent()
