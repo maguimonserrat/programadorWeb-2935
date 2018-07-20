@@ -11,26 +11,13 @@ $(document).ready(function () {
       })
   }
 
-  var urlBase = 'https://swapi.co/api/' + 'people/5/'
+  // var urlBase = 'https://swapi.co/api/' + 'people/5/'
 
-  getData(urlBase, getInfo)
+  getData('https://swapi.co/api/people/5/', showData)
 
-  function getData (error, data) {
+  function showData (error, data) {
     if (!error) {
-      showPeopleNames(data.results)
-      if (data.next) {
-        getData(data.next, getInfo)
-      }
-    } else {
-      console.log('Error', error)
-    }
-  }
-
-  function getInfo(){
-    
-  }
-  function showPeopleNames (people) {
-      console.log(people.name)
+      console.log(data.name)
     }
   }
 })
